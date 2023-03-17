@@ -1,0 +1,16 @@
+html, body { margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: auto; }
+body { background-color: #000; }
+
+.fullscreen16x9 {
+	margin: 100px;
+	--width: min(100dvw - 8px, 100dvh * 16 / 9 - 8px);
+	--height: min(100dvh - 8px, 100dvw * 9 / 16 - 8px);
+	width: var(--width);
+	height: var(--height);
+	margin:
+		calc((100dvh - var(--height)) / 2 - 4px)
+		calc((100dvw - var(--width)) / 2 - 4px);
+	background-color: #200;
+	border: 4px solid #0ff;
+	display: block;
+}
